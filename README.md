@@ -21,6 +21,7 @@ A simple yet extensible **Payroll Management System** built in Python using **Ob
 ---
 
 ## 🏗️ Project Structure
+
 payroll_system/
 │── payroll_system.py # Core system logic
 │── README.md # Documentation
@@ -28,14 +29,17 @@ payroll_system/
 ---
 
 ## ⚙️ Installation
+
 1. Clone the repo:
    ```bash
    git clone https://github.com/Sn4iZer/payroll-system.git
    cd payroll-system
 Run the program:
+
 python payroll_system.py
 
 💻 Example Usage
+
 from payroll_system import (
     SalariedEmployee, HourlyEmployee, Contractor,
     CashProcessor, BankTransferProcessor,
@@ -43,6 +47,7 @@ from payroll_system import (
 )
 
 # Employees
+
 se = SalariedEmployee("Amina", "Finance", 12000)
 he = HourlyEmployee("Yassine", "IT", 80)
 co = Contractor("Laila", "Marketing", 900)
@@ -52,9 +57,11 @@ he.set_overtime_multiplier(2.0)
 co.log_day(); co.log_day(); co.log_day()
 
 # Hours worked this month
+
 period_hours_map = {"Yassine": 172}
 
 # Run Payroll
+
 logger = FileLogger("payroll.log")
 system = PayrollSystem([se, he, co], BankTransferProcessor(), logger)
 system.process_payroll(period_hours_map)
@@ -68,13 +75,16 @@ system.process_payroll(period_hours_map)
 2025-09-01 10:12:23  Payroll complete.
 
 🛠️ Future Improvements
+
 - Add a Tkinter GUI Dashboard for payroll visualization
 - Store employee & payroll data in a SQLite database
 - Export reports to Excel / CSV
 - Add authentication for HR/Admin users
 
 👨‍💻 Author
+
 SnaiZer
 
 📜 License
+
 This project is licensed under the MIT License.
