@@ -31,11 +31,17 @@ A simple yet extensible **Payroll Management System** built in Python using **Ob
 💻 Example Usage
 
 `
+
 from payroll_system import (
+
     SalariedEmployee, HourlyEmployee, Contractor,
+    
     CashProcessor, BankTransferProcessor,
+    
     PayrollSystem, Logger, FileLogger
+    
 )
+
 `
 # Employees
 `
