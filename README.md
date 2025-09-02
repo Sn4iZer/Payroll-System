@@ -30,52 +30,41 @@ A simple yet extensible **Payroll Management System** built in Python using **Ob
 
 💻 Example Usage
 ```bash
-from payroll_system import (
-    SalariedEmployee, HourlyEmployee, Contractor,
-    CashProcessor, BankTransferProcessor,
-    PayrollSystem, Logger, FileLogger
-)
+  from payroll_system import (
+      SalariedEmployee, HourlyEmployee, Contractor,
+      CashProcessor, BankTransferProcessor,
+      PayrollSystem, Logger, FileLogger
+  )
 ```
 # Employees
-```
-se = SalariedEmployee("Amina", "Finance", 12000)
-
-he = HourlyEmployee("Yassine", "IT", 80)
-
-co = Contractor("Laila", "Marketing", 900)
-
-
-se.apply_raise(5)        # +5%
-
-he.set_overtime_multiplier(2.0)
-
-co.log_day(); co.log_day(); co.log_day()
+```bash
+  se = SalariedEmployee("Amina", "Finance", 12000)
+  he = HourlyEmployee("Yassine", "IT", 80)
+  co = Contractor("Laila", "Marketing", 900)
+  
+  se.apply_raise(5)        # +5%
+  he.set_overtime_multiplier(2.0)
+  co.log_day(); co.log_day(); co.log_day()
 ```
 
 # Hours worked this month
-```
-period_hours_map = {"Yassine": 172}
+```bash
+  period_hours_map = {"Yassine": 172}
 ```
 
 # Run Payroll
-```
-logger = FileLogger("payroll.log")
-
-system = PayrollSystem([se, he, co], BankTransferProcessor(), logger)
-
-system.process_payroll(period_hours_map)
+```bash
+  logger = FileLogger("payroll.log")
+  system = PayrollSystem([se, he, co], BankTransferProcessor(), logger)
+  system.process_payroll(period_hours_map)
 ```
 📊 Example Output
-```
-2025-09-01 10:12:23  Running payroll...
-
-2025-09-01 10:12:23  Paying Amina: gross 12600.00 MAD → net 10080.00 MAD
-
-2025-09-01 10:12:23  Paying Yassine: gross 14080.00 MAD → net 11264.00 MAD
-
-2025-09-01 10:12:23  Paying Laila: gross 2700.00 MAD → net 2430.00 MAD
-
-2025-09-01 10:12:23  Payroll complete.
+```bash
+  2025-09-01 10:12:23  Running payroll...
+  2025-09-01 10:12:23  Paying Amina: gross 12600.00 MAD → net 10080.00 MAD
+  2025-09-01 10:12:23  Paying Yassine: gross 14080.00 MAD → net 11264.00 MAD
+  2025-09-01 10:12:23  Paying Laila: gross 2700.00 MAD → net 2430.00 MAD
+  2025-09-01 10:12:23  Payroll complete.
 ```
 ## 🛠️ Future Improvements
 
