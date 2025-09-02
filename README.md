@@ -29,13 +29,10 @@ A simple yet extensible **Payroll Management System** built in Python using **Ob
    python payroll_system.py
 
 💻 Example Usage
-```
+```bash
 from payroll_system import (
-
     SalariedEmployee, HourlyEmployee, Contractor,
-   
     CashProcessor, BankTransferProcessor,
-
     PayrollSystem, Logger, FileLogger
 )
 ```
@@ -80,17 +77,16 @@ system.process_payroll(period_hours_map)
 
 2025-09-01 10:12:23  Payroll complete.
 ```
-🛠️ Future Improvements
+## 🛠️ Future Improvements
 
 - Add a Tkinter GUI Dashboard for payroll visualization
 - Store employee & payroll data in a SQLite database
 - Export reports to Excel / CSV
 - Add authentication for HR/Admin users
 
-👨‍💻 Author
-
+## 👨‍💻 Author
 SnaiZer
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
